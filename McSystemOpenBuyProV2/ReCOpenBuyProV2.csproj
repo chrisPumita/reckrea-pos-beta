@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4301382D-1072-4AD2-9589-7393A1A2A3BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>McSystemOpenBuyProV2</RootNamespace>
+    <AssemblyName>McSystemOpenBuyProV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6A9B612BD38F87A1B75CADF90329900A8C77FB5B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>McSystemOpenBuyProV2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.19\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="actualizaDatos.cs" />
+    <Compile Include="animationLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="animationLoading.Designer.cs">
+      <DependentUpon>animationLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIAS.cs" />
+    <Compile Include="CLIENTE.cs" />
+    <Compile Include="CONSULTA_Inventario.cs" />
+    <Compile Include="CONSULTA_Personas.cs" />
+    <Compile Include="CONSULTA_Servicio.cs" />
+    <Compile Include="CONSULTA_Ventas.cs" />
+    <Compile Include="ControlCatalogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCatalogo.Designer.cs">
+      <DependentUpon>ControlCatalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlInventario.Designer.cs">
+      <DependentUpon>ControlInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXION.cs" />
+    <Compile Include="ControlPanelVenta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanelVenta.Designer.cs">
+      <DependentUpon>ControlPanelVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlServicio.Designer.cs">
+      <DependentUpon>ControlServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILS_Servicio.cs" />
+    <Compile Include="DETAILS_Ticket.cs" />
+    <Compile Include="DETAIL_producto.cs" />
+    <Compile Include="DialogBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBuscarProducto.Designer.cs">
+      <DependentUpon>DialogBuscarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogCliente.Designer.cs">
+      <DependentUpon>DialogCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogConexion.Designer.cs">
+      <DependentUpon>DialogConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogConfiguracion.Designer.cs">
+      <DependentUpon>DialogConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogCRUD_Equipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogCRUD_Equipo.Designer.cs">
+      <DependentUpon>DialogCRUD_Equipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogElementos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogElementos.Designer.cs">
+      <DependentUpon>DialogElementos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIalogEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIalogEmpleado.Designer.cs">
+      <DependentUpon>DIalogEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEquipo.Designer.cs">
+      <DependentUpon>DialogEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogNewService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogNewService.Designer.cs">
+      <DependentUpon>DialogNewService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogNewServiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogNewServiceDetails.Designer.cs">
+      <DependentUpon>DialogNewServiceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPago.Designer.cs">
+      <DependentUpon>DialogPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPersonas.Designer.cs">
+      <DependentUpon>DialogPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogProducto.Designer.cs">
+      <DependentUpon>DialogProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogServicioOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogServicioOrder.Designer.cs">
+      <DependentUpon>DialogServicioOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIRECCION_FISCAL.cs" />
+    <Compile Include="EMPLEADO.cs" />
+    <Compile Include="EQUIPO.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginSesion.Designer.cs">
+      <DependentUpon>FrmLoginSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ReporteVtas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReporteVtas.Designer.cs">
+      <DependentUpon>Frm_ReporteVtas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMPRESORA.cs" />
+    <Compile Include="InputBox.cs" />
+    <Compile Include="MARCA.cs" />
+    <Compile Include="MD5.cs" />
+    <Compile Include="MessageBoxCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxCustom.Designer.cs">
+      <DependentUpon>MessageBoxCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenServicio.cs" />
+    <Compile Include="PERSONA.cs" />
+    <Compile Include="PRODUCTO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROVEEDOR.cs" />
+    <Compile Include="SERVICIO.cs" />
+    <Compile Include="DialogServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogServicio.Designer.cs">
+      <DependentUpon>DialogServicio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="animationLoading.resx">
+      <DependentUpon>animationLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCatalogo.resx">
+      <DependentUpon>ControlCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlInventario.resx">
+      <DependentUpon>ControlInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanelVenta.resx">
+      <DependentUpon>ControlPanelVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlServicio.resx">
+      <DependentUpon>ControlServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBuscarProducto.resx">
+      <DependentUpon>DialogBuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCliente.resx">
+      <DependentUpon>DialogCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogConexion.resx">
+      <DependentUpon>DialogConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogConfiguracion.resx">
+      <DependentUpon>DialogConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCRUD_Equipo.resx">
+      <DependentUpon>DialogCRUD_Equipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogElementos.resx">
+      <DependentUpon>DialogElementos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIalogEmpleado.resx">
+      <DependentUpon>DIalogEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEquipo.resx">
+      <DependentUpon>DialogEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogNewService.resx">
+      <DependentUpon>DialogNewService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogNewServiceDetails.resx">
+      <DependentUpon>DialogNewServiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPago.resx">
+      <DependentUpon>DialogPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPersonas.resx">
+      <DependentUpon>DialogPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogProducto.resx">
+      <DependentUpon>DialogProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogServicioOrder.resx">
+      <DependentUpon>DialogServicioOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginSesion.resx">
+      <DependentUpon>FrmLoginSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReporteVtas.resx">
+      <DependentUpon>Frm_ReporteVtas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxCustom.resx">
+      <DependentUpon>MessageBoxCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="DialogServicio.resx">
+      <DependentUpon>DialogServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="McSystemOpenBuyProV2_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb-1920-1026339.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banners-verticales-negocios-elegantes-estilo-onda_1017-17775.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoMcSystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grocery-store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-and-utensils.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipping-and-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserMale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-and-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-and-finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacoraWritte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changeHour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userMan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workstation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb-1920-10263391.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computerPrincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-and-utensils1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\road7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orangeHeaderBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computerPrincipal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2220086.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\search32.png" />
+    <None Include="Resources\ink-drop.png" />
+    <None Include="Resources\ink-cartridge.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\anaquel.png" />
+    <None Include="Resources\warehouse.png" />
+    <None Include="Resources\cargando.gif" />
+    <None Include="Resources\State_onService.png" />
+    <None Include="Resources\Statel_entregado.png" />
+    <None Include="Resources\State_cancelado.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\State_listoEntrega.png" />
+    <None Include="Resources\Statel_bodega.png" />
+    <None Include="Resources\State_cotizar.png" />
+    <None Include="Resources\State_garantia.png" />
+    <None Include="Resources\progress-bar_service.png" />
+    <None Include="Resources\progress-bar_noEspc.png" />
+    <None Include="Resources\progress-bar_garantia.png" />
+    <None Include="Resources\progress-bar_espera.png" />
+    <None Include="Resources\progress-bar_entregado.png" />
+    <None Include="Resources\progress-bar_cotizacion.png" />
+    <None Include="Resources\progress-bar_cancel.png" />
+    <None Include="Resources\progress-bar_Almacen.png" />
+    <None Include="Resources\click.png" />
+    <None Include="Resources\qr-code.png" />
+    <None Include="Resources\payment.png" />
+    <None Include="Resources\online-banking.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\noConexion.gif" />
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

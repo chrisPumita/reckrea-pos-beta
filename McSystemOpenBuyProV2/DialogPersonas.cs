@@ -418,5 +418,10 @@ namespace McSystemOpenBuyProV2
         {
             IniciarLoad(_Accion);
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

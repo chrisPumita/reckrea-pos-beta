@@ -305,6 +305,5 @@ namespace McSystemOpenBuyProV2
             Application.Exit();
         }
 
-
     }
 }

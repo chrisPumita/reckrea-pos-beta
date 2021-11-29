@@ -165,5 +165,40 @@ namespace McSystemOpenBuyProV2
                 }
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtMail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPw_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPort_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDBName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

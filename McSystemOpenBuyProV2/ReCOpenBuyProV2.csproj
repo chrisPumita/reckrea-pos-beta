@@ -502,6 +502,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\inventario.png" />
+    <None Include="Resources\catalogo.png" />
+    <None Include="Resources\ventas.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\pago.png" />
+    <None Include="Resources\print1.png" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\agregar.png" />
+    <None Include="Resources\Diseño sin título.png" />
+    <None Include="Resources\por-ciento.png" />
+    <None Include="Resources\codigo-de-barras.png" />
+    <None Include="Resources\buscando-lupa.png" />
+    <None Include="Resources\logo_sistema_300.png" />
     <None Include="Resources\search32.png" />
     <None Include="Resources\ink-drop.png" />
     <None Include="Resources\ink-cartridge.png" />

@@ -53,14 +53,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="McSystemOpenBuyProV2.exe" size="4005888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="McSystemOpenBuyProV2.exe" size="9892864">
       <assemblyIdentity name="McSystemOpenBuyProV2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9HM11CjMtzjzixKcqXV7+HHyqIrh+exppyE7lzlwDBU=</dsig:DigestValue>
+        <dsig:DigestValue>7B5b1PetzBH88R9aT/HI8il+QTrNUOhomjdAF6kq6Uc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

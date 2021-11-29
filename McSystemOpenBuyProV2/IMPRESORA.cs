@@ -23,7 +23,7 @@ namespace McSystemOpenBuyProV2
         int y = 20;
         int marginLeft = 0;
         int interlineado = 12;
-        Image img = Properties.Resources.logoMcSystem;
+        Image img = Properties.Resources.logo_sistema_300;
         int _tipoPago;
 
 
@@ -71,7 +71,7 @@ namespace McSystemOpenBuyProV2
 
 
             //Colocar el icono predefinido
-            e.Graphics.DrawImage(img, new Rectangle(interlineado, y += interlineado, (180), 43));
+            e.Graphics.DrawImage(img, new Rectangle(interlineado, y += interlineado, (180), 93));
             y += (interlineado*3);
             //e.Graphics.DrawString(Properties.Settings.Default.NombreEmpresa + "\n\r" + Properties.Settings.Default.Direccion1, font, Brushes.Black, new RectangleF(10, y += interlineado, ancho, interlineado));
             e.Graphics.DrawString(Properties.Settings.Default.Direccion1, font, Brushes.Black, new RectangleF(marginLeft, y += interlineado, ancho, interlineado));

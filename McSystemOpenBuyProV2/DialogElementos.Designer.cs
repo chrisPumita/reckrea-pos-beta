@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogElementos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgStatus = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,15 +43,18 @@
             this.lblOpc = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgStatus)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.imgStatus);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cboStatus);
@@ -59,29 +63,29 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.lblOpc);
             this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 419);
+            this.panel1.Size = new System.Drawing.Size(473, 399);
             this.panel1.TabIndex = 0;
             // 
             // imgStatus
             // 
             this.imgStatus.Image = global::McSystemOpenBuyProV2.Properties.Resources.onBlue;
-            this.imgStatus.Location = new System.Drawing.Point(427, 121);
+            this.imgStatus.Location = new System.Drawing.Point(15, 116);
             this.imgStatus.Name = "imgStatus";
             this.imgStatus.Size = new System.Drawing.Size(34, 21);
             this.imgStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgStatus.TabIndex = 61;
             this.imgStatus.TabStop = false;
+            this.imgStatus.Visible = false;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
             this.panel2.Controls.Add(this.lblNum);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 383);
+            this.panel2.Location = new System.Drawing.Point(0, 363);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(473, 36);
             this.panel2.TabIndex = 60;
@@ -101,7 +105,7 @@
             this.cboStatus.AutoSize = true;
             this.cboStatus.Checked = true;
             this.cboStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboStatus.Location = new System.Drawing.Point(362, 124);
+            this.cboStatus.Location = new System.Drawing.Point(402, 115);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(59, 17);
             this.cboStatus.TabIndex = 59;
@@ -110,11 +114,14 @@
             // 
             // btnAccion
             // 
-            this.btnAccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
+            this.btnAccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
             this.btnAccion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccion.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.btnAccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.btnAccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccion.ForeColor = System.Drawing.Color.White;
-            this.btnAccion.Location = new System.Drawing.Point(321, 147);
+            this.btnAccion.Location = new System.Drawing.Point(321, 139);
             this.btnAccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccion.Name = "btnAccion";
             this.btnAccion.Size = new System.Drawing.Size(140, 38);
@@ -135,7 +142,7 @@
             this.Nombre,
             this.Estatus});
             this.gridDatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gridDatos.Location = new System.Drawing.Point(11, 216);
+            this.gridDatos.Location = new System.Drawing.Point(12, 191);
             this.gridDatos.Name = "gridDatos";
             this.gridDatos.Size = new System.Drawing.Size(450, 161);
             this.gridDatos.TabIndex = 55;
@@ -170,11 +177,14 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(164, 147);
+            this.button2.Location = new System.Drawing.Point(164, 139);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 38);
@@ -186,47 +196,58 @@
             // lblOpc
             // 
             this.lblOpc.AutoSize = true;
-            this.lblOpc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblOpc.Location = new System.Drawing.Point(11, 65);
+            this.lblOpc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.lblOpc.Location = new System.Drawing.Point(11, 57);
             this.lblOpc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOpc.Name = "lblOpc";
-            this.lblOpc.Size = new System.Drawing.Size(151, 19);
+            this.lblOpc.Size = new System.Drawing.Size(136, 20);
             this.lblOpc.TabIndex = 42;
             this.lblOpc.Text = "{Tiite Elemento}";
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(11, 92);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(11, 84);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(450, 27);
+            this.txtNombre.Size = new System.Drawing.Size(450, 26);
             this.txtNombre.TabIndex = 41;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblTitulo.Location = new System.Drawing.Point(118, 9);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(6, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(212, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(193, 25);
             this.lblTitulo.TabIndex = 40;
             this.lblTitulo.Text = "{ElementoCalled}";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
+            this.panel6.Controls.Add(this.lblTitulo);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(473, 42);
+            this.panel6.TabIndex = 67;
             // 
             // DialogElementos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 419);
+            this.ClientSize = new System.Drawing.Size(473, 399);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DialogElementos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DialogElementos";
+            this.Text = "Elementos";
             this.Load += new System.EventHandler(this.DialogElementos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -234,6 +255,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +279,6 @@
         private System.Windows.Forms.DataGridViewImageColumn estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewImageColumn Estatus;
+        private System.Windows.Forms.Panel panel6;
     }
 }

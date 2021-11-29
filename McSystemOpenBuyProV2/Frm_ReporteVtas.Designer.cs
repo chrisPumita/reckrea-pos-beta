@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblEncontrados = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTickets = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -48,12 +50,11 @@
             this.cboPago = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.fechaFinal = new System.Windows.Forms.DateTimePicker();
             this.btnToday = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblEncontrados = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fechaInicial = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,10 +74,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabProductos = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabTickets.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -86,6 +88,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,22 +96,43 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1174, 650);
+            this.panel1.Size = new System.Drawing.Size(1174, 639);
             this.panel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.tabControl1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 72);
+            this.panel5.Location = new System.Drawing.Point(0, 53);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1174, 557);
+            this.panel5.Size = new System.Drawing.Size(1174, 586);
             this.panel5.TabIndex = 62;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
+            this.panel3.Controls.Add(this.lblEncontrados);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 555);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1174, 31);
+            this.panel3.TabIndex = 58;
+            // 
+            // lblEncontrados
+            // 
+            this.lblEncontrados.AutoSize = true;
+            this.lblEncontrados.ForeColor = System.Drawing.Color.White;
+            this.lblEncontrados.Location = new System.Drawing.Point(6, 9);
+            this.lblEncontrados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEncontrados.Name = "lblEncontrados";
+            this.lblEncontrados.Size = new System.Drawing.Size(85, 13);
+            this.lblEncontrados.TabIndex = 70;
+            this.lblEncontrados.Text = "No hay artículos";
             // 
             // tabControl1
             // 
@@ -121,7 +145,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(1174, 557);
+            this.tabControl1.Size = new System.Drawing.Size(1174, 586);
             this.tabControl1.TabIndex = 57;
             // 
             // tabTickets
@@ -133,7 +157,7 @@
             this.tabTickets.Location = new System.Drawing.Point(4, 22);
             this.tabTickets.Name = "tabTickets";
             this.tabTickets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTickets.Size = new System.Drawing.Size(1166, 531);
+            this.tabTickets.Size = new System.Drawing.Size(1166, 560);
             this.tabTickets.TabIndex = 0;
             this.tabTickets.Text = "Ventas por Ticket";
             this.tabTickets.UseVisualStyleBackColor = true;
@@ -146,7 +170,7 @@
             this.panel8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel8.Location = new System.Drawing.Point(3, 101);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(861, 425);
+            this.panel8.Size = new System.Drawing.Size(861, 454);
             this.panel8.TabIndex = 73;
             // 
             // gridDatos
@@ -174,7 +198,7 @@
             this.gridDatos.Location = new System.Drawing.Point(0, 0);
             this.gridDatos.Name = "gridDatos";
             this.gridDatos.ReadOnly = true;
-            this.gridDatos.Size = new System.Drawing.Size(861, 425);
+            this.gridDatos.Size = new System.Drawing.Size(861, 454);
             this.gridDatos.TabIndex = 63;
             this.gridDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDatos_CellContentClick);
             this.gridDatos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gridDatos_MouseClick);
@@ -265,12 +289,11 @@
             this.panel7.Controls.Add(this.cboPago);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.checkBox2);
+            this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.checkBox1);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.fechaFinal);
             this.panel7.Controls.Add(this.btnToday);
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.lblEncontrados);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.fechaInicial);
             this.panel7.Controls.Add(this.label2);
@@ -281,6 +304,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(765, 98);
             this.panel7.TabIndex = 72;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // cboPago
             // 
@@ -311,13 +335,16 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(554, 8);
+            this.button1.Location = new System.Drawing.Point(569, 52);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 79);
+            this.button1.Size = new System.Drawing.Size(94, 34);
             this.button1.TabIndex = 76;
             this.button1.Text = "FIltrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -333,12 +360,31 @@
             this.checkBox2.Text = "Servicios";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(667, 52);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 35);
+            this.button2.TabIndex = 68;
+            this.button2.Text = "Ver Todo";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(488, 40);
+            this.checkBox1.Location = new System.Drawing.Point(490, 34);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(59, 17);
             this.checkBox1.TabIndex = 74;
@@ -348,18 +394,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label6.Location = new System.Drawing.Point(154, 70);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 19);
+            this.label6.Size = new System.Drawing.Size(136, 20);
             this.label6.TabIndex = 72;
             this.label6.Text = "Forma de Pago:";
             // 
             // fechaFinal
             // 
-            this.fechaFinal.Location = new System.Drawing.Point(282, 38);
+            this.fechaFinal.Location = new System.Drawing.Point(284, 32);
             this.fechaFinal.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.fechaFinal.Name = "fechaFinal";
             this.fechaFinal.Size = new System.Drawing.Size(200, 20);
@@ -369,59 +415,36 @@
             // 
             this.btnToday.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnToday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnToday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
+            this.btnToday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnToday.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.btnToday.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(641, 8);
+            this.btnToday.Location = new System.Drawing.Point(569, 15);
             this.btnToday.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(108, 35);
+            this.btnToday.Size = new System.Drawing.Size(192, 35);
             this.btnToday.TabIndex = 69;
             this.btnToday.Text = "Hoy";
             this.btnToday.UseVisualStyleBackColor = false;
             this.btnToday.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(641, 53);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 35);
-            this.button2.TabIndex = 68;
-            this.button2.Text = "Ver Todo";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lblEncontrados
-            // 
-            this.lblEncontrados.AutoSize = true;
-            this.lblEncontrados.Location = new System.Drawing.Point(7, 75);
-            this.lblEncontrados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEncontrados.Name = "lblEncontrados";
-            this.lblEncontrados.Size = new System.Drawing.Size(85, 13);
-            this.lblEncontrados.TabIndex = 70;
-            this.lblEncontrados.Text = "No hay artículos";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label1.Location = new System.Drawing.Point(4, 8);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.label1.Location = new System.Drawing.Point(5, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 19);
+            this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 57;
             this.label1.Text = "Tickets de Venta";
             // 
             // fechaInicial
             // 
-            this.fechaInicial.Location = new System.Drawing.Point(48, 37);
+            this.fechaInicial.Location = new System.Drawing.Point(49, 32);
             this.fechaInicial.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.fechaInicial.Name = "fechaInicial";
             this.fechaInicial.Size = new System.Drawing.Size(200, 20);
@@ -431,24 +454,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label2.Location = new System.Drawing.Point(6, 38);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.label2.Location = new System.Drawing.Point(10, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 19);
+            this.label2.Size = new System.Drawing.Size(33, 20);
             this.label2.TabIndex = 66;
             this.label2.Text = "del";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label3.Location = new System.Drawing.Point(253, 39);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.label3.Location = new System.Drawing.Point(255, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 19);
+            this.label3.Size = new System.Drawing.Size(23, 20);
             this.label3.TabIndex = 67;
             this.label3.Text = "al";
             // 
@@ -458,30 +481,31 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(864, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(297, 523);
+            this.panel4.Size = new System.Drawing.Size(297, 552);
             this.panel4.TabIndex = 62;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.label4);
             this.flowLayoutPanel1.Controls.Add(this.txtProductos);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(297, 523);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(297, 552);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label4.Location = new System.Drawing.Point(2, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 25);
+            this.label4.Size = new System.Drawing.Size(208, 25);
             this.label4.TabIndex = 57;
             this.label4.Text = "Reporte de Ventas";
             // 
@@ -489,14 +513,13 @@
             // 
             this.txtProductos.AcceptsReturn = true;
             this.txtProductos.AcceptsTab = true;
-            this.txtProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtProductos.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductos.Location = new System.Drawing.Point(3, 28);
             this.txtProductos.Multiline = true;
             this.txtProductos.Name = "txtProductos";
             this.txtProductos.ReadOnly = true;
             this.txtProductos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtProductos.Size = new System.Drawing.Size(290, 252);
+            this.txtProductos.Size = new System.Drawing.Size(290, 322);
             this.txtProductos.TabIndex = 0;
             this.txtProductos.Text = "SELECCIONE UN ELEMENTO";
             // 
@@ -511,104 +534,104 @@
             this.panel6.Controls.Add(this.label8);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(3, 286);
+            this.panel6.Location = new System.Drawing.Point(3, 356);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(289, 220);
+            this.panel6.Size = new System.Drawing.Size(289, 167);
             this.panel6.TabIndex = 71;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblTotal.Location = new System.Drawing.Point(135, 132);
+            this.lblTotal.Location = new System.Drawing.Point(153, 123);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(93, 25);
+            this.lblTotal.Size = new System.Drawing.Size(84, 25);
             this.lblTotal.TabIndex = 65;
             this.lblTotal.Text = "$00.00";
             // 
             // lblIVA
             // 
             this.lblIVA.AutoSize = true;
-            this.lblIVA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIVA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblIVA.Location = new System.Drawing.Point(136, 97);
+            this.lblIVA.Location = new System.Drawing.Point(154, 88);
             this.lblIVA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIVA.Name = "lblIVA";
-            this.lblIVA.Size = new System.Drawing.Size(73, 19);
+            this.lblIVA.Size = new System.Drawing.Size(64, 20);
             this.lblIVA.TabIndex = 64;
             this.lblIVA.Text = "$00.00";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblDesc.Location = new System.Drawing.Point(136, 61);
+            this.lblDesc.Location = new System.Drawing.Point(154, 52);
             this.lblDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(73, 19);
+            this.lblDesc.Size = new System.Drawing.Size(64, 20);
             this.lblDesc.TabIndex = 63;
             this.lblDesc.Text = "$00.00";
             // 
             // lblSub
             // 
             this.lblSub.AutoSize = true;
-            this.lblSub.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblSub.Location = new System.Drawing.Point(136, 25);
+            this.lblSub.Location = new System.Drawing.Point(154, 16);
             this.lblSub.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSub.Name = "lblSub";
-            this.lblSub.Size = new System.Drawing.Size(73, 19);
+            this.lblSub.Size = new System.Drawing.Size(64, 20);
             this.lblSub.TabIndex = 62;
             this.lblSub.Text = "$00.00";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label9.Location = new System.Drawing.Point(37, 132);
+            this.label9.Location = new System.Drawing.Point(55, 123);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 25);
+            this.label9.Size = new System.Drawing.Size(92, 25);
             this.label9.TabIndex = 61;
             this.label9.Text = "TOTAL:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label8.Location = new System.Drawing.Point(84, 97);
+            this.label8.Location = new System.Drawing.Point(102, 88);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 19);
+            this.label8.Size = new System.Drawing.Size(44, 20);
             this.label8.TabIndex = 60;
             this.label8.Text = "IVA:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label7.Location = new System.Drawing.Point(18, 61);
+            this.label7.Location = new System.Drawing.Point(36, 52);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 19);
+            this.label7.Size = new System.Drawing.Size(101, 20);
             this.label7.TabIndex = 59;
             this.label7.Text = "Descuento:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.label5.Location = new System.Drawing.Point(38, 25);
+            this.label5.Location = new System.Drawing.Point(56, 16);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 19);
+            this.label5.Size = new System.Drawing.Size(82, 20);
             this.label5.TabIndex = 58;
             this.label5.Text = "Subtotal:";
             // 
@@ -617,7 +640,7 @@
             this.tabProductos.Location = new System.Drawing.Point(4, 22);
             this.tabProductos.Name = "tabProductos";
             this.tabProductos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProductos.Size = new System.Drawing.Size(1166, 531);
+            this.tabProductos.Size = new System.Drawing.Size(1166, 560);
             this.tabProductos.TabIndex = 1;
             this.tabProductos.Text = "Productos Vendidos";
             this.tabProductos.UseVisualStyleBackColor = true;
@@ -625,39 +648,41 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblTitulo);
+            this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1174, 72);
+            this.panel2.Size = new System.Drawing.Size(1174, 53);
             this.panel2.TabIndex = 61;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
+            this.panel9.Controls.Add(this.lblTitulo);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1174, 42);
+            this.panel9.TabIndex = 77;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.lblTitulo.Location = new System.Drawing.Point(11, 27);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(13, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(228, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(208, 25);
             this.lblTitulo.TabIndex = 56;
             this.lblTitulo.Text = "Reporte de Ventas";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(29)))), ((int)(((byte)(88)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 629);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1174, 21);
-            this.panel3.TabIndex = 60;
             // 
             // Frm_ReporteVtas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 650);
+            this.ClientSize = new System.Drawing.Size(1174, 639);
             this.Controls.Add(this.panel1);
             this.Name = "Frm_ReporteVtas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -665,6 +690,8 @@
             this.Load += new System.EventHandler(this.Frm_ReporteVtas_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabTickets.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -677,7 +704,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -685,10 +713,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TabPage tabProductos;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabTickets;
         private System.Windows.Forms.Panel panel4;
@@ -731,5 +756,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn edo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Forma;
         private System.Windows.Forms.ComboBox cboPago;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

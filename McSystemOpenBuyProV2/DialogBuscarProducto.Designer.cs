@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.gridDatos = new System.Windows.Forms.DataGridView();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,11 +38,10 @@
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel28 = new System.Windows.Forms.Panel();
+            this.btnCLose = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.lblEncontrados = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnCLose = new System.Windows.Forms.Button();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtCajaBusqueda = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -54,14 +54,40 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cboCategoria);
             this.panel1.Controls.Add(this.gridDatos);
             this.panel1.Controls.Add(this.panel28);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(736, 390);
+            this.panel1.Size = new System.Drawing.Size(736, 389);
             this.panel1.TabIndex = 0;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.AutoCompleteCustomSource.AddRange(new string[] {
+            "ALL IN ONE",
+            "APPLE",
+            "GENERICO",
+            "IMPRESORA",
+            "LAPTOP",
+            "NETBOOK",
+            "NOTEBOOK",
+            "PANTALLA",
+            "PC",
+            "PERIFERICO",
+            "TABLET",
+            "CONSUMIBLE",
+            "OTRO",
+            "CABLE"});
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(73, 34);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(323, 21);
+            this.cboCategoria.TabIndex = 5;
+            this.cboCategoria.Text = "Filtrar por Categoria...";
+            this.cboCategoria.SelectedIndexChanged += new System.EventHandler(this.cboCategoria_SelectedIndexChanged);
             // 
             // gridDatos
             // 
@@ -84,7 +110,7 @@
             this.gridDatos.Location = new System.Drawing.Point(0, 61);
             this.gridDatos.Name = "gridDatos";
             this.gridDatos.ReadOnly = true;
-            this.gridDatos.Size = new System.Drawing.Size(736, 281);
+            this.gridDatos.Size = new System.Drawing.Size(736, 280);
             this.gridDatos.TabIndex = 64;
             this.gridDatos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gridDatos_MouseClick);
             // 
@@ -142,25 +168,45 @@
             // panel28
             // 
             this.panel28.BackColor = System.Drawing.Color.White;
+            this.panel28.Controls.Add(this.btnCLose);
             this.panel28.Controls.Add(this.btnSeleccionar);
             this.panel28.Controls.Add(this.lblEncontrados);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel28.Location = new System.Drawing.Point(0, 342);
+            this.panel28.Location = new System.Drawing.Point(0, 341);
             this.panel28.Margin = new System.Windows.Forms.Padding(2);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(736, 48);
             this.panel28.TabIndex = 65;
             // 
+            // btnCLose
+            // 
+            this.btnCLose.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCLose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCLose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCLose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCLose.ForeColor = System.Drawing.Color.White;
+            this.btnCLose.Location = new System.Drawing.Point(631, 6);
+            this.btnCLose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCLose.Name = "btnCLose";
+            this.btnCLose.Size = new System.Drawing.Size(101, 35);
+            this.btnCLose.TabIndex = 11;
+            this.btnCLose.Text = "Cancelar";
+            this.btnCLose.UseVisualStyleBackColor = false;
+            this.btnCLose.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
             this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(479, 4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(522, 6);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(251, 35);
+            this.btnSeleccionar.Size = new System.Drawing.Size(101, 35);
             this.btnSeleccionar.TabIndex = 10;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
@@ -180,8 +226,6 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.btnCLose);
-            this.panel6.Controls.Add(this.cboCategoria);
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.txtCajaBusqueda);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -192,71 +236,30 @@
             this.panel6.Size = new System.Drawing.Size(736, 61);
             this.panel6.TabIndex = 3;
             // 
-            // btnCLose
-            // 
-            this.btnCLose.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCLose.BackColor = System.Drawing.Color.Maroon;
-            this.btnCLose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCLose.ForeColor = System.Drawing.Color.White;
-            this.btnCLose.Location = new System.Drawing.Point(679, 12);
-            this.btnCLose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnCLose.Name = "btnCLose";
-            this.btnCLose.Size = new System.Drawing.Size(44, 35);
-            this.btnCLose.TabIndex = 11;
-            this.btnCLose.Text = "X";
-            this.btnCLose.UseVisualStyleBackColor = false;
-            this.btnCLose.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cboCategoria
-            // 
-            this.cboCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cboCategoria.AutoCompleteCustomSource.AddRange(new string[] {
-            "ALL IN ONE",
-            "APPLE",
-            "GENERICO",
-            "IMPRESORA",
-            "LAPTOP",
-            "NETBOOK",
-            "NOTEBOOK",
-            "PANTALLA",
-            "PC",
-            "PERIFERICO",
-            "TABLET",
-            "CONSUMIBLE",
-            "OTRO",
-            "CABLE"});
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(55, 36);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(323, 21);
-            this.cboCategoria.TabIndex = 5;
-            this.cboCategoria.Text = "Filtrar por Categoria...";
-            this.cboCategoria.SelectedIndexChanged += new System.EventHandler(this.cboCategoria_SelectedIndexChanged);
-            // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::McSystemOpenBuyProV2.Properties.Resources.search;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 5);
+            this.pictureBox3.Image = global::McSystemOpenBuyProV2.Properties.Resources.buscando_lupa;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.Size = new System.Drawing.Size(55, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
             // txtCajaBusqueda
             // 
-            this.txtCajaBusqueda.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCajaBusqueda.Location = new System.Drawing.Point(55, 5);
+            this.txtCajaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCajaBusqueda.Location = new System.Drawing.Point(73, 5);
             this.txtCajaBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtCajaBusqueda.Name = "txtCajaBusqueda";
-            this.txtCajaBusqueda.Size = new System.Drawing.Size(323, 27);
+            this.txtCajaBusqueda.Size = new System.Drawing.Size(323, 26);
             this.txtCajaBusqueda.TabIndex = 3;
             // 
             // DialogBuscarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 390);
+            this.ClientSize = new System.Drawing.Size(736, 389);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Name = "DialogBuscarProducto";

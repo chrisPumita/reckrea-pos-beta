@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogConexion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.txtMail);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button2);
@@ -66,25 +68,29 @@
             this.panel1.Controls.Add(this.txtHost);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 269);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtMail
             // 
-            this.txtMail.BackColor = System.Drawing.Color.Green;
-            this.txtMail.ForeColor = System.Drawing.Color.White;
+            this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.txtMail.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtMail.Location = new System.Drawing.Point(180, 208);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(174, 22);
             this.txtMail.TabIndex = 16;
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label6.ForeColor = System.Drawing.Color.Green;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label6.Location = new System.Drawing.Point(30, 208);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 19);
@@ -93,17 +99,23 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button2.Location = new System.Drawing.Point(261, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 23);
             this.button2.TabIndex = 14;
             this.button2.Text = "TEXT MAIL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtStatus
             // 
             this.txtStatus.AutoSize = true;
+            this.txtStatus.BackColor = System.Drawing.Color.Transparent;
             this.txtStatus.ForeColor = System.Drawing.Color.Red;
             this.txtStatus.Location = new System.Drawing.Point(22, 188);
             this.txtStatus.Name = "txtStatus";
@@ -113,29 +125,36 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(196)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(279, 179);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 12;
             this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPw
             // 
-            this.txtPw.BackColor = System.Drawing.Color.Green;
-            this.txtPw.ForeColor = System.Drawing.Color.White;
+            this.txtPw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.txtPw.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtPw.Location = new System.Drawing.Point(180, 151);
             this.txtPw.Name = "txtPw";
             this.txtPw.Size = new System.Drawing.Size(174, 22);
             this.txtPw.TabIndex = 9;
             this.txtPw.Text = "{dataNameHost}";
+            this.txtPw.TextChanged += new System.EventHandler(this.txtPw_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label5.Location = new System.Drawing.Point(21, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 19);
@@ -144,19 +163,21 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.Green;
-            this.txtUserName.ForeColor = System.Drawing.Color.White;
+            this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtUserName.Location = new System.Drawing.Point(180, 123);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(174, 22);
             this.txtUserName.TabIndex = 7;
             this.txtUserName.Text = "{dataNameHost}";
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label4.Location = new System.Drawing.Point(75, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 19);
@@ -165,19 +186,21 @@
             // 
             // txtPort
             // 
-            this.txtPort.BackColor = System.Drawing.Color.Green;
-            this.txtPort.ForeColor = System.Drawing.Color.White;
+            this.txtPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.txtPort.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtPort.Location = new System.Drawing.Point(180, 95);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(174, 22);
             this.txtPort.TabIndex = 5;
             this.txtPort.Text = "{dataNameHost}";
+            this.txtPort.TextChanged += new System.EventHandler(this.txtPort_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label3.ForeColor = System.Drawing.Color.Green;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label3.Location = new System.Drawing.Point(120, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 19);
@@ -186,19 +209,21 @@
             // 
             // txtDBName
             // 
-            this.txtDBName.BackColor = System.Drawing.Color.Green;
-            this.txtDBName.ForeColor = System.Drawing.Color.White;
+            this.txtDBName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.txtDBName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtDBName.Location = new System.Drawing.Point(180, 67);
             this.txtDBName.Name = "txtDBName";
             this.txtDBName.Size = new System.Drawing.Size(174, 22);
             this.txtDBName.TabIndex = 3;
             this.txtDBName.Text = "{dataNameHost}";
+            this.txtDBName.TextChanged += new System.EventHandler(this.txtDBName_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label2.Location = new System.Drawing.Point(93, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 19);
@@ -207,19 +232,21 @@
             // 
             // txtHost
             // 
-            this.txtHost.BackColor = System.Drawing.Color.Green;
-            this.txtHost.ForeColor = System.Drawing.Color.White;
+            this.txtHost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(213)))), ((int)(((byte)(242)))));
+            this.txtHost.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtHost.Location = new System.Drawing.Point(180, 39);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(174, 22);
             this.txtHost.TabIndex = 1;
             this.txtHost.Text = "{dataNameHost}";
+            this.txtHost.TextChanged += new System.EventHandler(this.txtHost_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
             this.label1.Location = new System.Drawing.Point(120, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 19);
